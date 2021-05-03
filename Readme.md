@@ -1,5 +1,5 @@
-Just Download or Clone this repository 
-And Open it in your IntelliJ idea IDE
+Just Download or Clone this repository. 
+And Open it in your IntelliJ idea IDE.
 Run the Main.java from there and you should be able to use the app.
 
 
