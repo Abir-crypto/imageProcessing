@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.text.Font?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SingleColorFormController">
+    <children>
+        <Separator layoutX="389.0" orientation="VERTICAL" prefHeight="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0" />
+        <ImageView fx:id="imageView" fitHeight="373.0" fitWidth="359.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
+        <Label layoutX="403.0" layoutY="22.0" text="RED" textFill="RED">
+            <font>
+                <Font name="Arial Bold" size="20.0" />
+            </font>
+        </Label>
+        <Slider fx:id="slider_red_color" blockIncrement="1.0" layoutX="403.0" layoutY="56.0" max="255.0" prefHeight="38.0" prefWidth="185.0" showTickLabels="true" showTickMarks="true" AnchorPane.leftAnchor="405.0" AnchorPane.rightAnchor="10.0" />
+        <Label layoutX="405.0" layoutY="104.0" text="GREEN" textFill="LIME">
+            <font>
+                <Font name="Arial Bold" size="20.0" />
+            </font>
+        </Label>
+        <Slider fx:id="slider_green_color" blockIncrement="1.0" layoutX="405.0" layoutY="134.0" max="255.0" prefHeight="38.0" prefWidth="185.0" showTickLabels="true" showTickMarks="true" AnchorPane.rightAnchor="10.0" />
+        <Label layoutX="405.0" layoutY="183.0" text="BLUE" textFill="BLUE">
+            <font>
+                <Font name="Arial Bold" size="20.0" />
+            </font>
+        </Label>
+        <Slider fx:id="slider_blue_color" blockIncrement="1.0" layoutX="405.0" layoutY="215.0" max="255.0" prefHeight="38.0" prefWidth="185.0" showTickLabels="true" showTickMarks="true" AnchorPane.rightAnchor="10.0" />
+        <Button fx:id="buttonBack" layoutX="447.0" layoutY="356.0" mnemonicParsing="false" onAction="#gotoMainPage" text="Back" />
+    </children>
+</AnchorPane>

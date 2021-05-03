@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <MenuBar fx:id="menuBar" layoutX="41.0" layoutY="23.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="menu_import_image" mnemonicParsing="false" onAction="#openImageFromComputer" text="Import Image" />
+                  <MenuItem fx:id="menu_save_image" mnemonicParsing="false" onAction="#saveImageIntoComputer" text="Save Image" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Monochromatic Color">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#gotoSingleColorForm" text="Single Color" />
+                   <MenuItem mnemonicParsing="false" onAction="#doAverageGrayScale" text="Avg Gray Scale"/>
+                   <MenuItem mnemonicParsing="false" onAction="#doDeSaturation" text="Desaturated Image"/>
+                   <MenuItem mnemonicParsing="false" onAction="#doLuma" text="Luma Image"/>
+                   <MenuItem mnemonicParsing="false" onAction="#doDecomposition" text="Decomposed Image"/>
+               </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Color Model">
+            <items>
+              <MenuItem fx:id="menu_rgb_cmy_conversion" mnemonicParsing="false" onAction="#doConversionFromRBGToCMY" text="RGB To CMY" />
+                  <MenuItem fx:id="menu_rgb_hsi_conversion" mnemonicParsing="false" onAction="#doConversionFromRGBToHSI" text="RGB To HSI" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Histogram">
+                <items>
+                    <MenuItem fx:id="menu_grayscale_histogram" mnemonicParsing="false" onAction="#calculateGrayScaleHistogram" text="GrayScale Histogram"/>
+                    <MenuItem fx:id="menu_histogram_equalization" mnemonicParsing="false" onAction="#equalizeHistogram" text="Equalize histogram"/>
+                </items>
+
+            </Menu>
+            <Menu mnemonicParsing="false" text="Threshold">
+                <items>
+                    <MenuItem mnemonicParsing="false" text="BGT" onAction="#doBGT"/>
+                </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Filter">
+                <items>
+                    <MenuItem mnemonicParsing="false" text="Mean Filter" onAction="#doMeanFilter"/>
+                </items>
+                <items>
+                    <MenuItem mnemonicParsing="false" text="Min Filter" onAction="#doMinFilter"/>
+                </items>
+                <items>
+                    <MenuItem mnemonicParsing="false" text="Max Filter" onAction="#doMaxFilter"/>
+                </items>
+                <items>
+                    <MenuItem mnemonicParsing="false" text="Median Filter" onAction="#doMedianFilter"/>
+                </items>
+                <items>
+                    <MenuItem mnemonicParsing="false" text="Gaussian Filter" onAction="#doGaussianFilter"/>
+                </items>
+            </Menu>
+
+            <Menu mnemonicParsing="false" text="Edge Detection">
+                <items>
+                    <MenuItem mnemonicParsing="false" text="Sobel" onAction="#applySobelOperator"/>
+                </items>
+                <items>
+                    <MenuItem mnemonicParsing="false" text="Canny" onAction="#applyCannyOperator"/>
+                </items>
+            </Menu>
+
+        </menus>
+      </MenuBar>
+      <ImageView fx:id="input_image" fitHeight="350.0" fitWidth="275.0" layoutX="14.0" layoutY="89.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="40.0" />
+      <ImageView fx:id="output_image" fitHeight="350.0" fitWidth="275.0" layoutX="325.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="40.0" />
+   </children>
+</AnchorPane>
